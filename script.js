@@ -496,7 +496,7 @@ tree.render(0);
 
 function hidePromptAndGrow() {
   prompt.classList.add("hidden");
-  statusText.textContent = "Growing roots, branches, and heart leaves...";
+  statusText.textContent = "For you, my love, I am growing a tree of hearts...";
 
   tree.reset(Date.now());
   tree.start();
@@ -504,7 +504,7 @@ function hidePromptAndGrow() {
   regrowBtn.hidden = false;
 
   setTimeout(() => {
-    statusText.textContent = "Every leaf in this tree is a heart.";
+    statusText.textContent = "Every heart on this tree whispers how deeply I love you.";
   }, Math.max(2000, tree.totalTime));
 }
 
@@ -529,11 +529,11 @@ function dodgeNoButton() {
 yesBtn.addEventListener("click", hidePromptAndGrow);
 noBtn.addEventListener("click", dodgeNoButton);
 regrowBtn.addEventListener("click", () => {
-  statusText.textContent = "Growing a fresh heart tree...";
+  statusText.textContent = "Once more, for you, my heart blooms again...";
   tree.reset(Date.now());
   tree.start();
 
   setTimeout(() => {
-    statusText.textContent = "Every leaf in this tree is a heart.";
+    statusText.textContent = "Every heart on this tree whispers how deeply I love you.";
   }, Math.max(2000, tree.totalTime));
 });
