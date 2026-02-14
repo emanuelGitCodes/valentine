@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Valentine Tree</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="scene-card" aria-live="polite">
+      <canvas
+        id="treeCanvas"
+        width="1200"
+        height="760"
+        role="img"
+        aria-label="An animated tree that grows with heart-shaped leaves"
+      ></canvas>
+
+      <div class="hud">
+        <p id="statusText">A tree is waiting to grow for you.</p>
+        <button id="regrowBtn" class="btn secondary" type="button" hidden>Grow Again</button>
+      </div>
+    </section>
+
+    <section class="prompt" id="prompt" role="dialog" aria-modal="true" aria-labelledby="promptTitle">
+      <p class="kicker">One Question</p>
+      <h1 id="promptTitle">Do you want to be my valentine?</h1>
+      <p>
+        If you say yes, I will grow a tree where every leaf is a heart.
+      </p>
+      <div class="prompt-actions">
+        <button id="yesBtn" class="btn primary" type="button">Yes, forever</button>
+        <button id="noBtn" class="btn ghost" type="button">Not yet</button>
+      </div>
+      <p id="hintText" class="hint">Tip: the "Not yet" button is a little shy.</p>
+    </section>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
